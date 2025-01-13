@@ -1,0 +1,24 @@
+{
+  "tab": {
+    "home": "Home",
+    "market": "Market",
+    "account": "Account"
+  },
+  "home": {
+    "title": "home_title"
+  },
+  "profile": {
+    "language": {
+      "title": "Language"
+    },
+    "home": {
+      "language": "Language",
+      "password": "Login Password",
+      "verification": "Identify Verification",
+      "customer": "Customer Service",
+      "exit"    : "Exit",
+      "account" : "Delete Account",  
+      "appversion" : "App Verison"
+    }
+  }
+}
