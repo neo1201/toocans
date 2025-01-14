@@ -2,7 +2,8 @@
 import 'dart:convert';
 
 import 'package:toocans/app/modules/user/model/user_model.dart';
-import '../untils/tc_storage_utils.dart';
+
+import '../utils/tc_storage_utils.dart';
 
 class UserManager {
   static const String _userKey = 'current_user'; // 存储用户信息的键
