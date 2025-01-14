@@ -1,15 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:toocans/modules/home/home_main_page.dart';
+import 'package:toocans/modules/login/login_view.dart';
 import 'package:toocans/modules/main/tab_page.dart';
 import 'package:toocans/modules/market/market_main_page.dart';
 import 'package:toocans/modules/profile/language_page.dart';
 import 'package:toocans/modules/profile/profile_main_page.dart';
+import 'package:toocans/modules/splash/splash_view.dart';
 
 /// 路由管理工具类
 class RouteManager {
   /// 路由定义
   static final List<GetPage> routes = [
+    GetPage(
+      name: RouteNames.splash,
+      page: () => SplashPage(),
+    ),
+    GetPage(
+      name: RouteNames.login,
+      page: () => LoginPage(),
+    ),
+    GetPage(
+      name: RouteNames.tabbar,
+      page: () => TabPage(),
+    ),
     GetPage(
       name: RouteNames.home,
       page: () => const HomeMainPage(),
@@ -26,10 +40,7 @@ class RouteManager {
       name: RouteNames.language,
       page: () => LanguagePage(),
     ),
-    GetPage(
-      name: RouteNames.tabbar,
-      page: () => TabPage(),
-    ),
+
   ];
 
   /// 跳转到指定路由
@@ -60,10 +71,12 @@ class RouteManager {
 
 /// 路由名称常量
 class RouteNames {
+  static const String splash = '/splash';
+  static const String login = '/login';
+  static const String tabbar = '/tabbar';
   static const String home = '/home';
   static const String market = '/market';
   static const String profile = '/profile';
   static const String language = '/language';
-  static const String tabbar = '/tabbar';
 
 }

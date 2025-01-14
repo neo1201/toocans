@@ -533,6 +533,46 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
+  mmkv:
+    dependency: "direct main"
+    description:
+      name: mmkv
+      sha256: f725842c2dc07f6d30e944611c8a12e0def07c5b1eaf7a5e5f6e2c24b1678d00
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2"
+  mmkv_android:
+    dependency: transitive
+    description:
+      name: mmkv_android
+      sha256: aa4521073e635367e9dc26548b606879dd4cb00391d755fd4fd9681e23a79caa
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
+  mmkv_ios:
+    dependency: transitive
+    description:
+      name: mmkv_ios
+      sha256: ff8c14134d22f79ca067fa24ebb7d5df1aadb7875c00e9e715befae4bf8e46d9
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
+  mmkv_ohos:
+    dependency: transitive
+    description:
+      name: mmkv_ohos
+      sha256: d263180e82b2508d05ab9df31fd5236c81b257246d9c5f5b9c73e1a4a532ea3b
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2"
+  mmkv_platform_interface:
+    dependency: transitive
+    description:
+      name: mmkv_platform_interface
+      sha256: "5980cf939c065c8dec2fc051e49d98e4afcc16bc1a6bbc96f9614814fd540c43"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
   nm:
     dependency: transitive
     description:

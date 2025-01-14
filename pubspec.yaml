@@ -25,6 +25,8 @@ dependencies:
   flutter_screenutil: ^5.9.3
   logging: ^1.3.0
   json_annotation: ^4.9.0
+  # https://github.com/Tencent/MMKV/wiki/flutter_setup
+  mmkv: ">=2.0.2"
 
 
 dev_dependencies:
@@ -34,8 +36,6 @@ dev_dependencies:
   #https://github.com/flutterchina/json_model
   json_model: ^1.0.0
   json_serializable: ^6.9.3
-  json_annotation: ^4.9.0
-  logging: ^1.3.0
 
 
 flutter:

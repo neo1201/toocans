@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           fallbackLocale: Locale('en', 'US'),
           // 如果系统语言不支持，则使用英文
           builder: EasyLoading.init(),
-          initialRoute: RouteNames.tabbar,
+          initialRoute: RouteNames.splash,
           getPages: RouteManager.routes, // 注册路由
         );
       },
