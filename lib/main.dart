@@ -1,26 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:toocans/common/config/config_controller.dart';
 import 'package:toocans/common/routes/route_manager.dart';
-
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-
-import '/common/manager/app_translations.dart';
+import 'common/global.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  final ConfigController controller = Get.put(ConfigController());
-  final translations = AppTranslations();
-  await translations.loadTranslations(); // 加载 JSON 文件
-
-  runApp(MyApp(translations: translations));
-
+  Global.init().then((e) => runApp(MyApp()));
 }
 
 class MyApp extends StatelessWidget {
-  final AppTranslations translations;
-  MyApp({required this.translations});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +21,12 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          translations: translations, // 设置翻译类
-          locale: Get.deviceLocale, // 根据系统语言设置默认语言
-          fallbackLocale: Locale('en', 'US'), // 如果系统语言不支持，则使用英文
+          translations: Global.translations,
+          // 设置翻译类
+          locale: Get.deviceLocale,
+          // 根据系统语言设置默认语言
+          fallbackLocale: Locale('en', 'US'),
+          // 如果系统语言不支持，则使用英文
           builder: EasyLoading.init(),
           initialRoute: RouteNames.tabbar,
           getPages: RouteManager.routes, // 注册路由
