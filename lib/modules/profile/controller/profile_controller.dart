@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:toocans/app/common/services/api_urls.dart';
-import 'package:toocans/app/common/services/https_client.dart';
-import 'package:toocans/app/modules/user/model/user_model.dart';
+import 'package:toocans/common/services/api_urls.dart';
+import 'package:toocans/common/services/https_client.dart';
+import 'package:toocans/modules/user/model/user_model.dart';
 
 class ProfileController extends GetxController {
   final Rx<UserModel?> userInfo = Rx<UserModel?>(null);

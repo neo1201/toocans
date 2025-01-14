@@ -1,7 +1,7 @@
 
 import 'dart:convert';
 
-import 'package:toocans/app/modules/user/model/user_model.dart';
+import 'package:toocans/modules/user/model/user_model.dart';
 
 import '../utils/tc_storage_utils.dart';
 

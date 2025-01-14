@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
-import 'package:toocans/app/common/services/app_config.dart';
+import 'package:toocans/common/services/app_config.dart';
 // import '/jh_common/utils/jh_device_utils.dart';
 // import 'apis.dart';
 // import 'log_utils.dart';

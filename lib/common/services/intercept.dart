@@ -1,6 +1,6 @@
 
 import 'package:dio/dio.dart';
-import 'package:toocans/app/common/services/api_urls.dart';
+import 'package:toocans/common/services/api_urls.dart';
 import '../utils/log_utils.dart';
 import '../utils/tc_storage_utils.dart';
 import 'api_urls.dart';

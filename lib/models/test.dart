@@ -9,6 +9,7 @@ class Test {
   late String name;
   late List<String> keywords;
   num? age;
+  late num weight;
   
   factory Test.fromJson(Map<String,dynamic> json) => _$TestFromJson(json);
   Map<String, dynamic> toJson() => _$TestToJson(this);

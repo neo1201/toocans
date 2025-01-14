@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:toocans/app/modules/home/home_main_page.dart';
-import 'package:toocans/app/modules/main/tab_page.dart';
-import 'package:toocans/app/modules/market/market_main_page.dart';
-import 'package:toocans/app/modules/profile/language_page.dart';
-import 'package:toocans/app/modules/profile/profile_main_page.dart';
+import 'package:toocans/modules/home/home_main_page.dart';
+import 'package:toocans/modules/main/tab_page.dart';
+import 'package:toocans/modules/market/market_main_page.dart';
+import 'package:toocans/modules/profile/language_page.dart';
+import 'package:toocans/modules/profile/profile_main_page.dart';
 
 /// 路由管理工具类
 class RouteManager {

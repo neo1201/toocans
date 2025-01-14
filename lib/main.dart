@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:toocans/app/common/config/config_controller.dart';
-import 'package:toocans/app/common/routes/route_manager.dart';
+import 'package:toocans/common/config/config_controller.dart';
+import 'package:toocans/common/routes/route_manager.dart';
 
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import 'app/common/manager/app_translations.dart';
+import '/common/manager/app_translations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

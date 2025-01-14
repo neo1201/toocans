@@ -5,7 +5,7 @@
 
 // ignore_for_file: avoid_print
 import 'package:dio/dio.dart';
-import 'package:toocans/app/common/services/app_config.dart';
+import 'package:toocans/common/services/app_config.dart';
 import '../toast/toast_show.dart';
 import 'dio_utils.dart';
 import 'error_handle.dart';

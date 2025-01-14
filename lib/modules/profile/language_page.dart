@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:toocans/app/common/config/config_controller.dart';
-import 'package:toocans/app/common/manager/app_translations.dart';
+import 'package:toocans/common/config/config_controller.dart';
+import 'package:toocans/common/manager/app_translations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
