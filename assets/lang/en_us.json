@@ -24,5 +24,9 @@
   "user": {
     "kycLevel_0": "Unverified",
     "kycLevel_1": "Verified"
+  },
+  "login": {
+    "title": "Login in",
+    "register": "Register"
   }
 }

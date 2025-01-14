@@ -24,5 +24,9 @@
   "user": {
     "kycLevel_0": "未验证",
     "kycLevel_1": "已验证"
+  },
+  "login": {
+    "title": "Login in",
+    "register": "Register"
   }
 }

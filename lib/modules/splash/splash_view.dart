@@ -13,16 +13,8 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
-        body: Column(
-          children: [
-            Text('SplashPage'),
-            ElevatedButton(
-              onPressed: () {
-              },
-              child: Text('count'),
-            ),
-          ],
-        ));
+      appBar: AppBar(),
+      body: Center(child: Column()),
+    );
   }
 }
