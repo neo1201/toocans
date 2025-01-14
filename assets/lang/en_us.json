@@ -20,5 +20,9 @@
       "account" : "Delete Account",  
       "appversion" : "App Verison"
     }
+  },
+  "user": {
+    "kycLevel_0": "Unverified",
+    "kycLevel_1": "Verified"
   }
 }

@@ -9,6 +9,7 @@ import 'package:toocans/common/services/app_config.dart';
 import '../toast/toast_show.dart';
 import 'dio_utils.dart';
 import 'error_handle.dart';
+import 'intercept.dart';
 // import 'intercept.dart';
 // import 'log_utils.dart';
 
@@ -25,7 +26,7 @@ class HttpsClient {
     final List<Interceptor> interceptors = <Interceptor>[];
 
     /// 统一添加身份验证请求头
-    // interceptors.add(AuthInterceptor());
+    interceptors.add(AuthInterceptor());
 
     /// 刷新Token
     // interceptors.add(TokenInterceptor());
@@ -77,10 +78,10 @@ class HttpsClient {
       }) {
     // 参数处理（如果需要加密等统一参数）
     // if (!LogUtils.inProduction && isOpenLog) {
-    //   print('---------- HttpUtils URL ----------');
-    //   print(url);
-    //   print('---------- HttpUtils params ----------');
-    //   print(params);
+      print('---------- HttpUtils URL ----------');
+      print(url);
+      print('---------- HttpUtils params ----------');
+      print(params);
     // }
 
     Object? data;
@@ -107,7 +108,7 @@ class HttpsClient {
         success?.call(result);
       } else {
         // 其他状态，弹出错误提示信息
-        TCToast.showToast(result['msg']);
+        // TCToast.showToast(result['msg']);
         fail?.call(result['code'], result['msg']);
       }
     }, onError: (code, msg) {

@@ -1,0 +1,16 @@
+{
+  "id": "1",
+  "appId": "com.app.toocans",
+  "appVersion": "1.00",
+  "deviceType": "ios",
+  "deviceVersion": "",
+  "appChannel": "appstore",
+  "needUpdate": 0,
+  "needForceUpdate": 0,
+  "updateVersion": "1.00",
+  "downloadUrl": "1",
+  "created": "11",
+  "updated": "1",
+  "enableStatus": 1,
+  "newFeatures": "{\"en_US\":\"UPDATEHEllow\",\"zh_CN\":\"升级提示\"}"
+}

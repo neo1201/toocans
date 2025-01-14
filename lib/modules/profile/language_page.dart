@@ -5,19 +5,31 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class LanguagePage extends StatelessWidget {
+
+
   // 定义主题色常量
   static const Color kPrimaryColor = Color(0xFFBDFD60);
   static const Color kBackgroundColor = Colors.black;
   static double kPadding = 16.0.sp;
-
-  // 获取控制器实例
-  final ConfigController configController = Get.find<ConfigController>();
 
   // 语言选项列表
   final List<Map<String, String>> languageOptions = [
     {'label': 'English', 'languageCode': 'en', 'countryCode': 'US'},
     {'label': '简体中文', 'languageCode': 'zh', 'countryCode': 'CN'},
   ];
+
+  // 动态标题
+  final RxString pageTitle = ''.obs;
+
+  LanguagePage({super.key}) {
+    // 初始化标题为当前语言的 label
+    final currentLocale = Get.locale ?? Locale('en', 'US');
+    final currentOption = languageOptions.firstWhere(
+          (option) => option['languageCode'] == currentLocale.languageCode,
+      orElse: () => languageOptions[0], // 默认值为第一个语言选项
+    );
+    pageTitle.value = currentOption['label']!;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +38,7 @@ class LanguagePage extends StatelessWidget {
         backgroundColor: kBackgroundColor,
         elevation: 0, // 移除阴影
         title: Text(
-          "profile.language.title".tr, // 动态翻译标题
+          pageTitle.value, // 动态更新标题
           style: TextStyle(
             color: Colors.white,
             fontSize: 20.sp,
@@ -65,6 +77,12 @@ class LanguagePage extends StatelessWidget {
           option['countryCode'],
         );
         Get.updateLocale(Locale(option['languageCode']!, option['countryCode']));
+        // 更新标题为当前选中语言的 label
+        pageTitle.value = option['label']!;
+        // 返回上一页
+        Future.delayed(Duration(milliseconds: 300), () {
+          Get.back();
+        });
       },
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 20.sp, vertical: 16.sp),

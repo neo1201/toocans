@@ -1,0 +1,19 @@
+{
+  "userId": "1879050506851356672",
+  "nationalCode?": null,
+  "mobile?": null,
+  "email?": "1@qq.com",
+  "registerType": 2,
+  "concatMobile?": null,
+  "userType": 1,
+  "clientId?": null,
+  "clientKey": "ios75g43df",
+  "clientSecret?": null,
+  "grantType?": null,
+  "deviceType": "APP",
+  "accountId": "1879050507069460480",
+  "setPassword": false,
+  "kycLevel": 0,
+  "loginName": "1@qq.com",
+  "loginId": "app:1879050506851356672"
+}

@@ -20,5 +20,9 @@
       "account" : "删除账号",  
       "appversion" : "版本信息"
     }
+  },
+  "user": {
+    "kycLevel_0": "未验证",
+    "kycLevel_1": "已验证"
   }
 }
