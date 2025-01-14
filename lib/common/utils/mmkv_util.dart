@@ -4,7 +4,7 @@ class MMKVSdkUtil {
   MMKVSdkUtil._();
 
   static initialize() async {
-    final rootDir = await MMKV.initialize();
+    await MMKV.initialize();
   }
 }
 

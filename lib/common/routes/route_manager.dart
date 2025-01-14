@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:toocans/modules/home/home_main_page.dart';
 import 'package:toocans/modules/login/login_view.dart';

@@ -19,7 +19,6 @@ class SplashPage extends StatelessWidget {
             Text('SplashPage'),
             ElevatedButton(
               onPressed: () {
-                logic.count();
               },
               child: Text('count'),
             ),
