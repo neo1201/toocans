@@ -1,7 +1,7 @@
 
 import 'dart:convert';
 
-import 'package:toocans/modules/user/model/user_model.dart';
+import 'package:toocans/models/index.dart';
 
 import '../utils/tc_storage_utils.dart';
 
@@ -16,16 +16,16 @@ class UserManager {
   }
 
   /// 获取当前用户信息
-  static Future<UserModel?> currentUser() async {
+  static Future<UserInfo?> currentUser() async {
     var userJson = TcStorageUtils.getString(_userKey);
     if (userJson != null && userJson.isNotEmpty) {
-      return UserModel.fromJson(jsonDecode(userJson));
+      return UserInfo.fromJson(jsonDecode(userJson));
     }
     return null;
   }
 
   /// 保存用户信息并设置登录状态为已登录
-  static Future<void> saveUser(UserModel user) async {
+  static Future<void> saveUser(UserInfo user) async {
     String userJson = jsonEncode(user.toJson());
     await TcStorageUtils.saveString(_userKey, userJson);
     await TcStorageUtils.saveBool(_loginStatusKey, true); // 设置登录状态为 true
@@ -39,7 +39,7 @@ class UserManager {
 
   /// 检查用户信息是否有效（简单示例，可自定义校验逻辑）
   static Future<bool> validateUser() async {
-    UserModel? user = await currentUser();
-    return user != null && user.userId != null && user.userId!.isNotEmpty;
+    UserInfo? user = await currentUser();
+    return user != null && user.userId.isNotEmpty;
   }
 }

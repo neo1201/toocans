@@ -8,12 +8,13 @@ import 'dio_utils.dart';
 import 'error_handle.dart';
 
 // default token
-const String defaultToken = '';
+const String defaultToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOiJhcHA6MTg3OTA1MDUwNjg1MTM1NjY3MiIsInJuU3RyIjoiTVlMZThZd0RhRGY3dEZkdEk5aWg1d0hSaW0yY3QwWDUiLCJjbGllbnRpZCI6IjI0YjVkMmE3ZjQ3MTQ0MDliNGNjNjBiYWZjMWRkMmY2IiwidXNlcklkIjoxODc5MDUwNTA2ODUxMzU2NjcyfQ.Z4xt8UwX89haA6h06Vxa8SSOXKgoYFvhC_nDGocV8XI';
 const String kRefreshTokenUrl = ApiUrls.refreshToken;
 
 String getToken() {
-  var token = TcStorageUtils.getString('accessToken') ?? defaultToken;
-  return token;
+  var accessToken = TcStorageUtils.getString('accessToken') ?? '';
+  var token = accessToken.isEmpty ? defaultToken : accessToken;
+  return token;  return token;
 }
 
 void setToken(accessToken) {

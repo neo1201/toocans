@@ -7,16 +7,16 @@ import 'package:toocans/modules/profile/controller/profile_controller.dart';
 import '../../common/routes/route_manager.dart';
 import 'widgets/user_info_card.dart';
 import 'widgets/settings_card.dart';
-import 'package:get/get.dart';
 
 class ProfileMainPage extends StatelessWidget {
-  final ProfileController controller = Get.put(ProfileController());
+
+  final ProfileController profileController = Get.put(ProfileController());
+
   ProfileMainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     // context.watch<EasyLocalization>();
-
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
@@ -28,7 +28,7 @@ class ProfileMainPage extends StatelessWidget {
       backgroundColor: const Color(0xFF0D0D0D),
       body: Column(
         children: [
-          const UserInfoCard(),
+          UserInfoCard(),
           Expanded(
             child: Transform.translate(
               offset: Offset(0, -40.h), // 向上移动 40 像素
@@ -84,6 +84,9 @@ class ProfileMainPage extends StatelessWidget {
                         imagePath: 'assets/images/profile/ic_pro_version.png',
                         title: "profile.home.appversion".tr,
                         trailing: '1.0.1',
+                        onTap: () {
+                          profileController.checkVersionAction();
+                        },
                       ),
                     ],
                   ),

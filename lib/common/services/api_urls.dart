@@ -24,4 +24,8 @@ class ApiUrls {
   /// 用户Info
   static const String userInfo = '/user/info';
 
+  /// config
+  /// 获取升级版本
+  static const String appVersionConfig = '/baseConfig/appVersionConfig';
+
 }
