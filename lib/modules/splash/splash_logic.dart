@@ -20,9 +20,9 @@ class SplashLogic extends GetxController {
       bool isLoggedIn = Global.isLoggedIn(); // 需要在 Global 中实现此方法
       // 根据登录状态跳转
       if (isLoggedIn) {
-        Get.offAllNamed(RouteNames.tabbar);
+        RouteManager.offAllTo(RouteNames.tabbar);
       } else {
-        Get.offAllNamed(RouteNames.login);
+        RouteManager.offAllTo(RouteNames.tabbar);
       }
     });
   }

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:toocans/common/config/app_config.dart';
 import 'package:toocans/common/services/api_urls.dart';
 import 'package:toocans/common/services/https_client.dart';
+import 'package:toocans/common/utils/dialog_utils.dart';
 import 'package:toocans/models/index.dart';
 
 import '../../../common/toast/toast_show.dart';
@@ -44,7 +45,7 @@ class ProfileController extends GetxController {
   getUserInfo() {
     HttpsClient.get(
       ApiUrls.userInfo,  // API 路径
-      null,  
+      null,
       // loadingText: '加载中...',
       success: (data) {
         userInfo.value = UserInfo.fromJson(data['data']);
@@ -54,6 +55,28 @@ class ProfileController extends GetxController {
       },
     );
   }
+
+  exitAccount() {
+    DialogUtils.showCenterDialog(
+        title: "profile.exit_dialog.title".tr,
+        content: "profile.exit_dialog.content".tr,
+        onConfirm: () {
+          HttpsClient.post(
+            ApiUrls.logout,  // API 路径
+            null,
+            success: (data) {
+              //TODO 清除 用户数据跳到login页
+
+            },
+            fail: (code, msg) {
+
+            },
+          );
+        });
+
+
+  }
+
   
   @override
   void onReady() {

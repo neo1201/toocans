@@ -1,6 +1,5 @@
-
 // 项目环境
-enum AppEnvironment { dev, test, release}
+enum AppEnvironment { dev, test, release }
 
 class AppConfig {
   static const AppEnvironment current = AppEnvironment.dev;
@@ -13,8 +12,6 @@ class AppConfig {
         return 'https://api-staging.example.com';
       case AppEnvironment.release:
         return 'https://api.example.com';
-      default:
-        return '';
     }
   }
 

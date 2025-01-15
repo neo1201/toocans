@@ -19,6 +19,12 @@
       "exit"    : "Exit",
       "account" : "Delete Account",  
       "appversion" : "App Verison"
+    },
+    "exit_dialog": {
+      "title": "User exit",
+      "content": "Direct Login?",
+      "cancel": "Cancel",
+      "confirm": "Confirm"
     }
   },
   "user": {
