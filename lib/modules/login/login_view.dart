@@ -1,9 +1,7 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:toocans/common/routes/route_manager.dart';
 import 'package:toocans/common/utils/assets_path_util.dart';
 
 import '../../common/utils/app_colors.dart';
@@ -302,7 +300,7 @@ class LoginPage extends StatelessWidget {
             child: Text(
               "login.phoneCodeLogin".tr,
               style:
-              TextStyle(color: AppColors.adaptiveTextLink, fontSize: 12.sp),
+                  TextStyle(color: AppColors.adaptiveTextLink, fontSize: 12.sp),
             ),
           ),
         )

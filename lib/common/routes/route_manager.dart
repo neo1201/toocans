@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 import 'package:toocans/modules/home/home_main_page.dart';
 import 'package:toocans/modules/login/login_view.dart';
-import 'package:toocans/modules/main/tab_page.dart';
 import 'package:toocans/modules/market/market_main_page.dart';
 import 'package:toocans/modules/profile/language_page.dart';
 import 'package:toocans/modules/profile/profile_main_page.dart';
