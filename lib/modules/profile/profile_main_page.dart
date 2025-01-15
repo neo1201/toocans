@@ -7,9 +7,9 @@ import 'package:toocans/modules/profile/controller/profile_controller.dart';
 import '../../common/routes/route_manager.dart';
 import 'widgets/user_info_card.dart';
 import 'widgets/settings_card.dart';
+import '../../common/utils/dialog_utils.dart';
 
 class ProfileMainPage extends StatelessWidget {
-
   final ProfileController profileController = Get.put(ProfileController());
 
   ProfileMainPage({super.key});
@@ -75,6 +75,9 @@ class ProfileMainPage extends StatelessWidget {
                       SettingItem(
                         imagePath: 'assets/images/profile/ic_pro_exit.png',
                         title: "profile.home.exit".tr,
+                        onTap: () {
+                          profileController.exitAccount();
+                        },
                       ),
                       SettingItem(
                         imagePath: 'assets/images/profile/ic_pro_delete.png',

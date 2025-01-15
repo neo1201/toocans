@@ -22,6 +22,12 @@
       "exit": "退出登录",
       "account": "删除账号",
       "appversion": "版本信息"
+    },
+    "exit_dialog": {
+      "title": "用户退出",
+      "content": "直接登录？",
+      "cancel": "取消",
+      "confirm": "确认"
     }
   },
   "user": {
