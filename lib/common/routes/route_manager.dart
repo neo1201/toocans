@@ -7,6 +7,7 @@ import 'package:toocans/modules/profile/language_page.dart';
 import 'package:toocans/modules/profile/profile_main_page.dart';
 import 'package:toocans/modules/splash/splash_view.dart';
 
+import '../../modules/login/login_by_email_or_phone_auth_code/login_by_email_or_phone_auth_code_view.dart';
 
 /// 路由名称常量
 class RouteNames {
@@ -17,8 +18,9 @@ class RouteNames {
   static const String market = '/market';
   static const String profile = '/profile';
   static const String language = '/language';
+  static const String loginByEmailOrPhoneAuthCodePage =
+      '/loginByEmailOrPhoneAuthCodePage';
 }
-
 
 /// 路由管理工具类
 class RouteManager {
@@ -33,8 +35,16 @@ class RouteManager {
       page: () => LoginPage(),
     ),
     GetPage(
-      name: RouteNames.tabbar,
-      page: () => TabPage(),
+      name: RouteNames.login,
+      page: () => LoginPage(),
+    ),
+    GetPage(
+      name: RouteNames.loginByEmailOrPhoneAuthCodePage,
+      page: () {
+        final args = Get.arguments as Map<String, dynamic>?;
+        final isEmail = args?['isEmail'] as bool? ?? true;
+        return LoginByEmailOrPhoneAuthCodePage(isEmail: isEmail);
+      },
     ),
     GetPage(
       name: RouteNames.home,
@@ -52,7 +62,6 @@ class RouteManager {
       name: RouteNames.language,
       page: () => LanguagePage(),
     ),
-
   ];
 
   /// 跳转到指定路由

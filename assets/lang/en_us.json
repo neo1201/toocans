@@ -1,4 +1,7 @@
 {
+  "common": {
+    "next": "Next"
+  },
   "tab": {
     "home": "Home",
     "market": "Market",
@@ -16,9 +19,9 @@
       "password": "Login Password",
       "verification": "Identify Verification",
       "customer": "Customer Service",
-      "exit"    : "Exit",
-      "account" : "Delete Account",  
-      "appversion" : "App Verison"
+      "exit": "Exit",
+      "account": "Delete Account",
+      "appversion": "App Verison"
     }
   },
   "user": {
@@ -27,6 +30,17 @@
   },
   "login": {
     "title": "Login in",
-    "register": "Register"
+    "email": "E-mail",
+    "phone": "Phone",
+    "emailEditHint": "Enter Email",
+    "phoneEditHint": "Enter Phone",
+    "password": "Password",
+    "emailCodeLogin": "Email code login",
+    "phoneCodeLogin": "Phone code login",
+    "registerTips": "Unregistered users will be automatically registered directly",
+    "userService": "I have read and agreed to the Toocans User ",
+    "agreementAndPrivacyPolicy": "《Agreement and Privacy policy》",
+    "emailVerification": "Email Verification",
+    "phoneVerification": "Phone Verification"
   }
 }

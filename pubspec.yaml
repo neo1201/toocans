@@ -45,6 +45,10 @@ flutter:
   assets:
     - assets/lang/
     - assets/images/
+    - assets/images/common/
+    - assets/images/common/2.0x/
+    - assets/images/login/
+    - assets/images/login/2.0x/
     - assets/images/profile/
     - assets/images/profile/2.0x/
     - assets/images/profile/3.0x/

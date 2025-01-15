@@ -1,4 +1,7 @@
 {
+  "common": {
+    "next": "Next"
+  },
   "tab": {
     "home": "首页",
     "market": "市场",
@@ -16,9 +19,9 @@
       "password": "修改密码",
       "verification": "身份认证",
       "customer": "客服中心",
-      "exit"    : "退出登录",
-      "account" : "删除账号",  
-      "appversion" : "版本信息"
+      "exit": "退出登录",
+      "account": "删除账号",
+      "appversion": "版本信息"
     }
   },
   "user": {
@@ -27,6 +30,17 @@
   },
   "login": {
     "title": "Login in",
-    "register": "Register"
+    "email": "E-mail",
+    "phone": "Phone",
+    "emailEditHint": "Enter Email",
+    "phoneEditHint": "Enter Phone",
+    "password": "Password",
+    "emailCodeLogin": "Email code login",
+    "phoneCodeLogin": "Phone code login",
+    "registerTips": "Unregistered users will be automatically registered directly",
+    "userService": "I have read and agreed to the Toocans User ",
+    "agreementAndPrivacyPolicy": "《Agreement and Privacy policy》",
+    "emailVerification": "Email Verification",
+    "phoneVerification": "Phone Verification"
   }
 }

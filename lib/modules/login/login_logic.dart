@@ -12,4 +12,13 @@ class LoginLogic extends GetxController {
   void switchToPhone() {
     state.isEmailLogin = false;
   }
+
+  // 切换同意状态
+  void toggleServiceAgree() {
+    state.isServiceAgree = !state.isServiceAgree;
+  }
+
+  void toggleRegisterAgree() {
+    state.isRegisterAgree = !state.isRegisterAgree;
+  }
 }
